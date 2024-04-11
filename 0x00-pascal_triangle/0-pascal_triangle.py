@@ -14,18 +14,15 @@ def pascal_triangle(n):
   Returns:
       A list of lists representing the Pascal's triangle.
   """
-
   if n <= 0:
     return []
 
-  res = [[1]]  # Base case: first row is always [1]
-
+  res = [[1]]
   for i in range(1, n):
-    level = [1]  # Start each row with 1
+    level = [1]
     for j in range(1, i):
-      # Utilize previous calculations from the same row
       level.append(res[i-1][j-1] + res[i-1][j])
-    level.append(1)  # End each row with 1
+    level.append(1)
     res.append(level)
 
   return res
