@@ -14,7 +14,7 @@ def minOperations(n):
     '''
     pasted_chars = 1
     clipboard = 0
-    counter = 0 
+    counter = 0
 
     while pasted_chars < n:
         if clipboard == 0:
